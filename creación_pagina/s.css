@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* cabecera */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+/* menu */
+nav {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid white;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.left{
+    display: flex;
+    justify-content: end;
+}
+
+.right{
+    display: flex;
+}
+
+/* Enlace */
+a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #444;
+}
+
+/* cuerpo */
+
+.img1{
+    background-image: url(/img/Wall-of-Deaths.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 200vh;
+}
+
+section {
+    height: 100vh;
+    background-image: url(/img/slipknot_2025.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+h3{
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+
+    background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0))
+}
+
+div{
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    
+    background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0))
+}
