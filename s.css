@@ -1,0 +1,191 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+
+    grid-template-areas: 
+        'header''header' 50px
+        'main''main' 100px
+        'footer''footer' 100px/
+        1fr        1fr;
+    ;
+}
+
+/* cabecera */
+header {
+    /* background-color: #333;
+    color: #fff;
+    padding: 10px; */
+    grid-area: 'header';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Fondo oscuro semitransparente */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    z-index: 1000; /* Para que esté por encima de otros elementos */
+}
+
+/* menu */
+nav {
+    display: flex;
+    justify-content: space-around;
+    /* border: 1px solid white; */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.left{
+    display: flex;
+    justify-content: end;
+}
+
+.right{
+    display: flex;
+}
+
+/* Enlace */
+a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #444;
+}
+
+/* cuerpo */
+
+main{
+    grid-area: 'main';
+}
+
+.img1{
+    background-image: url(/img/Wall-of-Deaths.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.img2{
+    height: 100vh;
+    background-image: url(/img/slipknot_2025.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+h3{
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+
+    background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0));
+}
+
+div{
+    display: flex;
+    justify-content: center;
+    display: flex;
+    color: #fff;
+    padding: 20px;
+    max-width: 1500px;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0));
+}
+
+/* galeria */
+.galeria {
+    width: 100%; /* Asegura que ocupe todo el ancho de la pantalla */
+    display: flex;
+    justify-content: center; /* Centra el contenido */
+    overflow: hidden; /* Oculta las imágenes que se salen */
+    position: relative;
+    background: transparent; /* Fondo oscuro */
+    padding: 20px 0;
+    height: 100vh; /* Toma toda la altura de la pantalla */
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+}
+
+
+.galeria-contenedor{
+    display: flex;
+    gap: 10px;
+    animation: slide 20s linear infinite; /* Efecto de desplazamiento infinito */
+    width: max-content; /* Asegura que el contenedor solo ocupe el espacio necesario */
+}
+
+.galeria img {
+    height: 150px; /* Ajusta según necesites */
+    object-fit: cover;
+    border-radius: 10px; /* Bordes redondeados opcionales */
+}
+
+
+   
+
+/* .galeria{
+    width: 100%;
+    overflow: hidden; 
+    position: relative;
+    background: black;
+    padding: 20px 0;
+}
+
+.galeria-contenedor{
+    display: flex;
+    gap: 10px;
+    animation: slide 20s linear infinite; 
+}
+
+.galeria img {
+    height: 150px; 
+    object-fit: cover;
+    border-radius: 10px; 
+} */
+
+/* Animación para mover las imágenes de derecha a izquierda */
+@keyframes slide {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* footer */
+
+footer {
+    grid-area: 'footer';
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Fondo oscuro semitransparente */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+}
