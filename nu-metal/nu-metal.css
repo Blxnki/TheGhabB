@@ -1,142 +1,112 @@
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-
-body{
+body {
+    font-family: 'Anton', Arial, sans-serif;
+    text-transform: uppercase;
+    background: black url('concrete-texture.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #c0c0c0;
     display: grid;
-
     grid-template-areas: 
-        'header''header' 1fr
-        'main''main' 1fr
-        'footer''footer' 1fr/
-        1fr        1fr;
-    ;
-
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+        'header'
+        'main'
+        'footer';
     max-width: 1550px;
-
-    background-color: #1A1A1D;
+    line-height: 1.6;
 }
 
-/* cabecera */
+/* CABECERA */
 header {
-    /* background-color: #333;
-    color: #fff;
-    padding: 10px; */
-    grid-area: 'header';
+    grid-area: header;
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.3); /* Fondo oscuro semitransparente */
-    color: white;
-    padding: 15px;
+    background: rgba(20, 20, 20, 0.9); /* Fondo negro con transparencia */
+    color: red;
+    padding: 20px;
     text-align: center;
-    max-width: 1550px;
+    text-shadow: 3px 3px 10px rgba(138, 43, 226, 0.7); /* Sombra morada */
+    border-bottom: 3px solid red;
 }
 
-/* menu */
+/* MENÚ */
 nav {
     display: flex;
-    justify-content: space-around;
-    /* border: 1px solid white; */
+    justify-content: center;
+    padding: 10px 0;
 }
 
 nav ul {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-ul {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 10px;
+    gap: 15px;
 }
 
-.left{
-    display: flex;
-    justify-content: end;
-}
-
-.right{
-    display: flex;
-}
-
-/* Enlace */
-a {
-    color: #fff;
+nav a {
+    color: red;
     text-decoration: none;
-    padding: 10px;
-    
-    transition: background-color 0.3s ease;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    text-shadow: 2px 2px 10px rgba(138, 43, 226, 0.7); /* Sombra morada */
 }
 
-a:hover {
-    background-color: #444;
+nav a:hover {
+    background: red;
+    color: black;
+    text-shadow: 2px 2px 10px black;
 }
 
-
-/*main*/
+/* CONTENIDO PRINCIPAL */
 main {
-    max-width: 800px;
+    max-width: 900px;
     margin: 20px auto;
-    background: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    background-color: #6A1E55;
+    background: #111;
+    padding: 30px;
+    border-radius: 10px;
+    border: 3px solid red;
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.7); /* Sombra morada */
 }
 
 h3 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    color: #222;
-    display: flex;
-    justify-content: center;
+    font-size: 2.5rem;
+    color: red;
+    text-align: center;
+    text-shadow: 3px 3px 10px rgba(138, 43, 226, 0.7); /* Sombra morada */
 }
 
-div {
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: center;
-}
-
-
-/* galeria */
+/* GALERÍA (SE MANTIENE IGUAL) */
 .galeria {
-    width: 100%; /* Asegura que ocupe todo el ancho de la pantalla */
+    width: 100%;
     display: flex;
-    justify-content: center; /* Centra el contenido */
-    overflow: hidden; /* Oculta las imágenes que se salen */
+    justify-content: center;
+    overflow: hidden;
     position: relative;
-    background: transparent; /* Fondo oscuro */
+    background: transparent;
     padding: 20px 0;
-    height: 100vh; /* Toma toda la altura de la pantalla */
-    display: flex;
-    align-items: center; /* Centra verticalmente */
+    height: 100vh;
+    align-items: center;
 }
 
-
-.galeria-contenedor{
+.galeria-contenedor {
     display: flex;
     gap: 10px;
-    animation: slide 20s linear infinite; /* Efecto de desplazamiento infinito */
-    width: max-content; /* Asegura que el contenedor solo ocupe el espacio necesario */
+    animation: slide 20s linear infinite;
+    width: max-content;
 }
 
 .galeria img {
-    height: 150px; /* Ajusta según necesites */
+    height: 150px;
     object-fit: cover;
-    border-radius: 10px; /* Bordes redondeados opcionales */
+    border-radius: 10px;
 }
 
+/* SEGUNDA GALERÍA */
 .galeria2 {
     width: 100%;
     overflow: hidden;
@@ -148,8 +118,8 @@ div {
 .galeria-contenedor2 {
     display: flex;
     gap: 10px;
-    width: max-content; /* Para que el contenido se desplace sin problemas */
-    animation: slide 20s linear infinite; 
+    width: max-content;
+    animation: slide 20s linear infinite;
 }
 
 .galeria2 img {
@@ -168,13 +138,126 @@ div {
     }
 }
 
-
-/*footer*/
+/* PIE DE PÁGINA */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: black;
+    color: red;
     text-align: center;
-    padding: 1rem;
-    width: 100%;
-    max-width: 1550px;
+    padding: 15px;
+    border-top: 3px solid red;
+    text-shadow: 2px 2px 10px rgba(138, 43, 226, 0.7); /* Sombra morada */
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 15px;
+        border-radius: 5px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .galeria img {
+        height: 100px;
+    }
+
+    h3 {
+        font-size: 2rem;
+        padding: 15px;
+    }
+
+    nav a {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+
+    main {
+        padding: 15px;
+        border-radius: 5px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .galeria img {
+        height: 100px;
+    }
+
+    h3 {
+        font-size: 2rem;
+        padding: 15px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    nav a {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 10px;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+        padding: 5px 8px;
+    }
+
+    .galeria img {
+        height: 80px;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+        padding: 5px 8px;
+    }
+
+    .galeria img {
+        height: 80px;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+    }
 }
